@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"> 
+    <head th:include="layout :: htmlhead"></head>   
+    <body>
+        <div class="container">
+			<nav th:replace="layout :: menu">(menu)</nav>  
+            <table class="table table-hover table-dark table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>Descricao</th>
+                        <th>Preço</th>
+                        <th>Data</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Produto 1</td>
+                        <td>R$ 200,00</td>
+                        <td>21/08/1998</td>
+                        <td>Categoria 1</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 2</td>
+                        <td>R$ 250,00</td>
+                        <td>21/08/1997</td>
+                        <td>Categoria 2</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 3</td>
+                        <td>R$ 450,00</td>
+                        <td>21/08/1994</td>
+                        <td>Categoria 3</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 4</td>
+                        <td>R$ 150,00</td>
+                        <td>21/08/1993</td>
+                        <td>Categoria 4</td>
+                    </tr>    
+                </tbody>
+            </table>     
+        </div>
+        <div th:include="layout :: footer" id="footer">(footer)</div>
+    </body>
+</html> 
