@@ -14,30 +14,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Produto 1</td>
-                        <td>R$ 200,00</td>
-                        <td>21/08/1998</td>
-                        <td>Categoria 1</td>
+                    <tr th:each="umproduto : ${listaProdutos}">
+                        <td th:text="${umproduto.descricao}"></td>
+                        <td th:text="${umproduto.preco}"></td>
+                        <td th:text="${umproduto.dataRegistro}"></td>
+                        <td th:text="${umproduto.categoria.nome}"></td>
                     </tr>
-                    <tr>
-                        <td>Produto 2</td>
-                        <td>R$ 250,00</td>
-                        <td>21/08/1997</td>
-                        <td>Categoria 2</td>
-                    </tr>
-                    <tr>
-                        <td>Produto 3</td>
-                        <td>R$ 450,00</td>
-                        <td>21/08/1994</td>
-                        <td>Categoria 3</td>
-                    </tr>
-                    <tr>
-                        <td>Produto 4</td>
-                        <td>R$ 150,00</td>
-                        <td>21/08/1993</td>
-                        <td>Categoria 4</td>
-                    </tr>    
                 </tbody>
             </table>     
         </div>
