@@ -3,6 +3,7 @@ package br.univille.carlosribeirodacs2021.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -52,5 +53,5 @@ public class Venda {
     }
     public void setCupom(String cupom) {
         this.cupom = cupom;
-    }    
+    }   
 }

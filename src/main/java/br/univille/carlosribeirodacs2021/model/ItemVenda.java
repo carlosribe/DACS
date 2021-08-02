@@ -30,5 +30,5 @@ public class ItemVenda {
     }
     public void setValorDesconto(float valorDesconto) {
         this.valorDesconto = valorDesconto;
-    }   
+    }    
 }

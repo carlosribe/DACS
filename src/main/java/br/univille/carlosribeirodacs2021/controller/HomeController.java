@@ -13,16 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
     
     @GetMapping
-    public ModelAndView index(){  
-        Date dateNow = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
-
+    public ModelAndView index(){
+        Date dataAgora = new Date();
+        SimpleDateFormat sdf  = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
         HashMap<String,String> dados = new HashMap<>();
-        dados.put("tempo", sdf.format(dateNow));
-        dados.put("nomeapp","App Java!");
+        dados.put("tempo", sdf.format(dataAgora));
+        dados.put("nomeapp","App Java lindo!!!");
 
         return new ModelAndView("home/index", dados);
-    }  
+    }   
 }
-
 
