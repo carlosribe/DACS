@@ -17,12 +17,11 @@ public class HomeController {
     public ModelAndView index(){
     
         Date dataAgora = new Date();
-        SimpleDateFormat sdf 
-            = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 
         HashMap<String,String> dados = new HashMap<>();
         dados.put("tempo", sdf.format(dataAgora));
-        dados.put("nomeapp","App Java lindo!!!");
+        dados.put("nomeapp","DACS!!!");
 
         return new ModelAndView("home/index", dados);
     }   
