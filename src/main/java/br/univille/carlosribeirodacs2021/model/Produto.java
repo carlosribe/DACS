@@ -25,6 +25,16 @@ public class Produto {
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.MERGE})
     private Categoria categoria;
 
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.MERGE})
+    private Fornecedor fornecedor;
+
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
     public Categoria getCategoria() {
         return categoria;
     }
