@@ -49,6 +49,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="slcfornecedor">Fornecedor:</label>
+                            <select class="form-control" id="slcfornecedor" th:field="*{fornecedor}">
+                                <option th:value="${umFornecedor.id}" 
+                                        th:text="${umFornecedor.nome}"
+                                        th:each="umFornecedor : ${listaFornecedores}">
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 
                 <button type="submit">Enviar</button>
 
