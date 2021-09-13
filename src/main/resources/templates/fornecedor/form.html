@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xml:lang>
     
-    <head th:include="layout :: htmlhead"></head>
-    
+    <head th:include="layout :: htmlhead">
+        <title></title>
+    </head>  
     <body>
         <div class="container">
 			<nav th:replace="layout :: menu">(menu)</nav>
