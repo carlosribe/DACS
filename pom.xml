@@ -10,9 +10,9 @@
 		<relativePath/> 
 	</parent>
 	<groupId>br.univille</groupId>
-	<artifactId>walterdacs2021</artifactId>
+	<artifactId>carlosribeirodacs2021</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>walterdacs2021</name>
+	<name>carlosribeirodacs2021</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
