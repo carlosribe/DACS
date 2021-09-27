@@ -6,8 +6,13 @@
     
     <body>
         <div class="container">
-			
+            <nav th:replace="layout :: menu">(menu)</nav>
+            <h3> Importador de Produtos</h3>
             
+            <select>
+                <Option th:each="umForncedor : ${listaFornecedor}"
+                        th:text="${umForncedor.nome}"></Option>
+            </select>
 
         </div>
         <div th:include="layout :: footer" id="footer">(footer)</div>

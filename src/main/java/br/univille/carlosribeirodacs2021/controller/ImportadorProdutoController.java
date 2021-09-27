@@ -1,37 +1,27 @@
 package br.univille.carlosribeirodacs2021.controller;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Scanner;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import br.univille.carlosribeirodacs2021.model.Fornecedor;
+import br.univille.carlosribeirodacs2021.service.FornecedorService;
 
 @Controller
 @RequestMapping("/import-produto")
 public class ImportadorProdutoController {
-    public ModelAndView index(){
-        try {
-            URL endereco = new URL("endereço do coleguinha");
-            HttpURLConnection conn = (HttpURLConnection)endereco.openConnection();
-            conn.setRequestMethod("GET");
-            conn.connect();
-            conn.getResponseCode();
-            int getResponseCode = conn.getResponseCode();
-            System.out.println(getResponseCode);
-            Scanner leitor = new Scanner(endereco.openStream());
-            while(leitor.hasNext()){
-                System.out.println(leitor.nextLine());
-            }
+    
+    @Autowired
+    private FornecedorService fornecedorService;
 
-        } catch (MalformedURLException e) {            
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new ModelAndView("/importproduto/index");
+    @GetMapping
+    public ModelAndView index(){
+        List<Fornecedor> listaFornecedor = fornecedorService.getAllFornecedores();
+
+        return new ModelAndView("/importproduto/index", "listaFornecedor", listaFornecedor);
     }
 }
