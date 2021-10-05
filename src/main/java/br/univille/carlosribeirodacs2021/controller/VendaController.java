@@ -53,32 +53,24 @@ public class VendaController {
 
     @PostMapping(params= {"insertproc"})
     public ModelAndView insertproc(Venda venda, ItemVenda novoitemvenda) {
-
-        //Adiciona o novo item de venda na venda
         novoitemvenda.setValor(novoitemvenda.getProduto().getPreco() - novoitemvenda.getValorDesconto());
         venda.getColItemVenda().add(novoitemvenda);
-
         HashMap<String,Object> dados = new HashMap<>();
         List<Produto> listaProdutos = produtoService.getAllProdutos();
         dados.put("venda",venda);
         dados.put("listaProdutos",listaProdutos);
         dados.put("novoitemvenda", new ItemVenda());
-
         return new ModelAndView("venda/form",dados);
     }
 
     @PostMapping(params= {"removeproc"})
     public ModelAndView removeproc(@RequestParam(name = "removeproc") int index, Venda venda, ItemVenda novoitemvenda) {
-
-        //Remove o item de venda da venda
         venda.getColItemVenda().remove(index);
-
         HashMap<String,Object> dados = new HashMap<>();
         List<Produto> listaProdutos = produtoService.getAllProdutos();
         dados.put("venda",venda);
         dados.put("listaProdutos",listaProdutos);
         dados.put("novoitemvenda", new ItemVenda());
-
         return new ModelAndView("venda/form",dados);
     }
 

@@ -19,12 +19,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="umFornecedor : ${listaFornecedores}">
-                        <td th:text="${umFornecedor.nome}"></td>
+                    <tr th:each="umfornecedor : ${listaFornecedores}">
+                        <td th:text="${umfornecedor.nome}"></td>
                         <td>
-                            <a th:href="@{'/fornecedor/alterar/'+${umFornecedor.id}}" class="btn btn-primary">Alterar</a>
+                            <a th:href="@{'/fornecedor/alterar/'+${umfornecedor.id}}" class="btn btn-primary">Alterar</a>
                             <button class="btn btn-danger js-delete" 
-                                    th:data-id="${umFornecedor.id}" >Excluir</button>    
+                                    th:data-id="${umfornecedor.id}" >Excluir</button>    
                         </td>
                     </tr>
                 </tbody>
