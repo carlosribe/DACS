@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import br.univille.carlosribeirodacs2021.model.Fornecedor;
 import br.univille.carlosribeirodacs2021.service.FornecedorService;
 
@@ -22,8 +21,8 @@ public class FornecedorController {
 
     @GetMapping
     public ModelAndView index(){
-        List<Fornecedor> listaFornecedores = service.getAllFornecedores();
-        return new ModelAndView("/fornecedor/index", "listaFornecedores", listaFornecedores);
+        List<Fornecedor> listaFornecedor = service.getAllFornecedores();
+        return new ModelAndView("/fornecedor/index", "listaFornecedores", listaFornecedor);
     }
 
     @GetMapping("/novo")
