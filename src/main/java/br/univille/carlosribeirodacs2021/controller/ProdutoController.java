@@ -15,6 +15,8 @@ import br.univille.carlosribeirodacs2021.model.Produto;
 import br.univille.carlosribeirodacs2021.service.ProdutoService;
 import br.univille.carlosribeirodacs2021.model.Categoria;
 import br.univille.carlosribeirodacs2021.service.CategoriaService;
+import br.univille.carlosribeirodacs2021.model.Fornecedor;
+import br.univille.carlosribeirodacs2021.service.FornecedorService;
 
 @Controller
 @RequestMapping("/produto")
@@ -24,6 +26,8 @@ public class ProdutoController {
     private ProdutoService service;
     @Autowired
     private CategoriaService categoriaService;
+    @Autowired
+    private FornecedorService fornecedorService;
     
     @GetMapping
     public ModelAndView index(){
@@ -52,6 +56,9 @@ public class ProdutoController {
         dados.put("produto",produto);
         List<Categoria> listaCategorias = categoriaService.getAllCategorias();
         dados.put("listaCategorias",listaCategorias);
+
+        List<Fornecedor> listaFornecedores = fornecedorService.getAllFornecedores();
+        dados.put("listaFornecedores",listaFornecedores);
         return new ModelAndView("produto/form",dados);
     }
 

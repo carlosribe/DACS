@@ -52,4 +52,8 @@ public class Fornecedor {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+   
+    public String toString(){
+        return this.getNome();
+    }
 }
