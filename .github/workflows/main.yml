@@ -30,4 +30,4 @@ jobs:
           docker tag dacs2021:latest ${{ secrets.DOCKERHUB_USERNAME }}/dacs2021:latest
       - name: Push Container
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/dacs2021:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/dacs2021:latest 
