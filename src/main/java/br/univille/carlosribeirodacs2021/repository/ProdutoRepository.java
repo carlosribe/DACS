@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import br.univille.carlosribeirodacs2021.model.Produto;
 
 @Repository
-public interface ProdutoRepository extends JpaRepository<Produto,Long>{
+public interface ProdutoRepository extends JpaRepository<Produto, Long>{
     
-}
+ }

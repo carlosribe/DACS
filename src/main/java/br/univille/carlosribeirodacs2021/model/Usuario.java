@@ -7,14 +7,12 @@ import javax.persistence.Id;
 
 @Entity
 public class Usuario {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    public long id;
-    public String usuario;
-    public String senha;
-
+    private long id;
+    private String usuario;
+    private String senha;
     public long getId() {
         return id;
     }
@@ -32,5 +30,5 @@ public class Usuario {
     }
     public void setSenha(String senha) {
         this.senha = senha;
-    }    
+    }
 }

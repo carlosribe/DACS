@@ -9,13 +9,11 @@
 			<nav th:replace="layout :: menu">(menu)</nav>
 
             <form th:action="@{/produto/(form)}" th:object="${produto}" method="POST">
-
                 <input type="hidden" th:field="*{id}">
-
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="txtdescricao">Descrição:</label>
+                            <label for="txtnome">Descrição:</label>
                             <input type="text" th:field="*{descricao}" id="txtdescricao" class="form-control"> 
                         </div>
                     </div>
@@ -24,7 +22,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="txtpreco">Preço:</label>
-                            <input type="text" th:field="*{preco}" id="txtpreco" class="form-control">
+                            <input type="text" th:field="*{preco}" id="txtpreco"  class="form-control">
                         </div>
                     </div>
                 </div>
@@ -32,34 +30,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="txtdata">Data Registro:</label>
-                            <input type="date" th:field="*{dataRegistro}" id="txtdata" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="slccategoria">Cagetoria:</label>
-                            <select class="form-control" id="slccategoria" th:field="*{categoria}">
-                                <option th:value="${umaCategoria.id}" 
-                                        th:text="${umaCategoria.nome}"
-                                        th:each="umaCategoria : ${listaCategorias}">
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="slcfornecedor">Fornecedor:</label>
-                            <select class="form-control" id="slcfornecedor" th:field="*{fornecedor}">
-                                <option th:value="${umFornecedor.id}" 
-                                        th:text="${umFornecedor.nome}"
-                                        th:each="umFornecedor : ${listaFornecedores}">
-                                </option>
-                            </select>
+                            <input type="text" th:field="*{dataRegistro}" id="txtdata" class="form-control">
                         </div>
                     </div>
                 </div>

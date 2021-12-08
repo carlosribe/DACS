@@ -10,3 +10,4 @@ public interface CategoriaService {
     public Categoria save(Categoria categoria);
     public void delete(Categoria categoria);
 }
+

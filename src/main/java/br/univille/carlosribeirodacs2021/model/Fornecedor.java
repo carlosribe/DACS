@@ -7,12 +7,13 @@ import javax.persistence.Id;
 
 @Entity
 public class Fornecedor {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
     private String urlAPI;
-    private String urlAPIAuth;
+    private String urlAPIauth;
     private String usuario;
     private String senha;
     
@@ -34,11 +35,11 @@ public class Fornecedor {
     public void setUrlAPI(String urlAPI) {
         this.urlAPI = urlAPI;
     }
-    public String getUrlAPIAuth() {
-        return urlAPIAuth;
+    public String getUrlAPIauth() {
+        return urlAPIauth;
     }
-    public void setUrlAPIAuth(String urlAPIAuth) {
-        this.urlAPIAuth = urlAPIAuth;
+    public void setUrlAPIauth(String urlAPIauth) {
+        this.urlAPIauth = urlAPIauth;
     }
     public String getUsuario() {
         return usuario;
@@ -51,9 +52,5 @@ public class Fornecedor {
     }
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-   
-    public String toString(){
-        return this.getNome();
-    }
+    }   
 }

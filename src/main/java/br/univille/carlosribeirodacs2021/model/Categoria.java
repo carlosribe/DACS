@@ -7,15 +7,12 @@ import javax.persistence.Id;
 
 @Entity
 public class Categoria {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-
-    public String toString(){
-        return this.getNome();
-    }
-
+   
     public long getId() {
         return id;
     }
@@ -27,5 +24,5 @@ public class Categoria {
     }
     public void setNome(String nome) {
         this.nome = nome;
-    }
+    }   
 }

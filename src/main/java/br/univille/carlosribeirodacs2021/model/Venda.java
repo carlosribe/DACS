@@ -3,7 +3,6 @@ package br.univille.carlosribeirodacs2021.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +14,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity
+@Entity //para gravar os dados da ram para o bd para "salvar"
 public class Venda {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -27,9 +27,9 @@ public class Venda {
     private String cupom;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "venda_id")
+    @JoinColumn(name = "itemvenda_id")
     private List<ItemVenda> colItemVenda = new ArrayList<ItemVenda>();
-    
+
     public long getId() {
         return id;
     }
@@ -53,11 +53,5 @@ public class Venda {
     }
     public void setCupom(String cupom) {
         this.cupom = cupom;
-    }
-    public List<ItemVenda> getColItemVenda() {
-        return colItemVenda;
-    }
-    public void setColItemVenda(List<ItemVenda> colItemVenda) {
-        this.colItemVenda = colItemVenda;
     }   
 }

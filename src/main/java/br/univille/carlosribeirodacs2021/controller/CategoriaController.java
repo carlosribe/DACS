@@ -15,14 +15,14 @@ import br.univille.carlosribeirodacs2021.service.CategoriaService;
 @Controller
 @RequestMapping("/categoria")
 public class CategoriaController {
+    
     @Autowired
     private CategoriaService service;
 
     @GetMapping
     public ModelAndView index(){
         List<Categoria> listaCategoria = service.getAllCategorias();
-
-        return new ModelAndView("categoria/index","listaCategorias",listaCategoria);
+        return new ModelAndView("categoria/index", "listaCategorias", listaCategoria);
     }
 
     @GetMapping("/novo")
@@ -38,7 +38,7 @@ public class CategoriaController {
 
     @GetMapping(value = "/alterar/{id}")
     public ModelAndView alterar(@PathVariable("id") Categoria categoria){
-        return new ModelAndView("categoria/form","categoria",categoria);
+        return new ModelAndView("categoria/form", "categoria", categoria);
     }
 
     @GetMapping(value = "/delete/{id}")
@@ -47,3 +47,4 @@ public class CategoriaController {
         return new ModelAndView("redirect:/categoria");
     }
 }
+
